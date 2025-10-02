@@ -2,7 +2,6 @@ import { Dock, DockIcon } from "@/components/magicui/dock";
 import { ModeToggle } from "@/components/ui/mode-toggle";
 import { buttonVariants } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { PdfViewerModal } from "@/components/ui/pdf-viewer-modal";
 import {
   Tooltip,
   TooltipContent,
@@ -11,6 +10,7 @@ import {
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import PdfViewerModal from "@/components/ui/pdf-viewer-modal";
 
 export default function Navbar() {
   return (
@@ -46,16 +46,18 @@ export default function Navbar() {
                 <TooltipTrigger asChild>
                   {name === "Resume" ? (
                     <PdfViewerModal
-                      pdfUrl={social.url}
+                      src={social.url}
+                      title="Resume"
                       trigger={
-                        <div
+                        <button
                           className={cn(
                             buttonVariants({ variant: "ghost", size: "icon" }),
-                            "size-12 cursor-pointer"
+                            "size-12"
                           )}
+                          aria-label="Open resume"
                         >
                           <social.icon className="size-4" />
-                        </div>
+                        </button>
                       }
                     />
                   ) : (
@@ -65,6 +67,8 @@ export default function Navbar() {
                         buttonVariants({ variant: "ghost", size: "icon" }),
                         "size-12"
                       )}
+                      target="_blank"
+                      rel="noreferrer"
                     >
                       <social.icon className="size-4" />
                     </Link>
