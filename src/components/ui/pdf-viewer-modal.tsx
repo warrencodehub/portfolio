@@ -4,7 +4,6 @@ import { useState } from "react";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -44,42 +43,42 @@ export function PdfViewerModal({
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>{trigger}</DialogTrigger>
-      <DialogContent className="max-w-4xl w-full h-[90vh] p-0">
-        <DialogHeader className="p-4 pb-0">
-          <div className="flex items-center justify-between">
-            <div>
-              <DialogTitle>{title}</DialogTitle>
-              <DialogDescription>{description}</DialogDescription>
-            </div>
-            <div className="flex items-center gap-2">
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={handleDownload}
-                className="flex items-center gap-2"
-              >
-                <Download className="h-4 w-4" />
-                Download
-              </Button>
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={handleOpenInNewTab}
-                className="flex items-center gap-2"
-              >
-                <ExternalLink className="h-4 w-4" />
-                Open
-              </Button>
-            </div>
+      <DialogContent className="max-w-3xl w-full h-[85vh] p-0 gap-0">
+        <DialogHeader className="flex flex-row items-center justify-between p-4 border-b">
+          <div className="flex flex-col">
+            <DialogTitle className="text-lg font-semibold">{title}</DialogTitle>
+          </div>
+          <div className="flex items-center gap-2">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={handleDownload}
+              className="flex items-center gap-2 h-8 px-3"
+            >
+              <Download className="h-4 w-4" />
+              DOWNLOAD
+            </Button>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={handleOpenInNewTab}
+              className="flex items-center gap-2 h-8 px-3"
+            >
+              <ExternalLink className="h-4 w-4" />
+              Open
+            </Button>
           </div>
         </DialogHeader>
-        <div className="flex-1 p-4 pt-0">
-          <div className="w-full h-full border rounded-lg overflow-hidden bg-gray-50 dark:bg-gray-900">
+        <div className="flex-1 bg-gray-100 dark:bg-gray-800 p-4">
+          <div className="w-full h-full bg-white dark:bg-gray-900 rounded-lg shadow-sm overflow-hidden">
             <iframe
-              src={`${pdfUrl}#toolbar=1&navpanes=0&scrollbar=1`}
-              className="w-full h-full"
+              src={`${pdfUrl}#toolbar=0&navpanes=0&scrollbar=0&statusbar=0&messages=0&scrollbar=0`}
+              className="w-full h-full border-0"
               title={title}
-              style={{ minHeight: "600px" }}
+              style={{ 
+                minHeight: "600px",
+                background: "white"
+              }}
             />
           </div>
         </div>
