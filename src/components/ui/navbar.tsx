@@ -2,6 +2,7 @@ import { Dock, DockIcon } from "@/components/magicui/dock";
 import { ModeToggle } from "@/components/ui/mode-toggle";
 import { buttonVariants } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import { PdfViewerModal } from "@/components/ui/pdf-viewer-modal";
 import {
   Tooltip,
   TooltipContent,
@@ -43,15 +44,31 @@ export default function Navbar() {
             <DockIcon key={name}>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Link
-                    href={social.url}
-                    className={cn(
-                      buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-12"
-                    )}
-                  >
-                    <social.icon className="size-4" />
-                  </Link>
+                  {name === "Resume" ? (
+                    <PdfViewerModal
+                      pdfUrl={social.url}
+                      trigger={
+                        <div
+                          className={cn(
+                            buttonVariants({ variant: "ghost", size: "icon" }),
+                            "size-12 cursor-pointer"
+                          )}
+                        >
+                          <social.icon className="size-4" />
+                        </div>
+                      }
+                    />
+                  ) : (
+                    <Link
+                      href={social.url}
+                      className={cn(
+                        buttonVariants({ variant: "ghost", size: "icon" }),
+                        "size-12"
+                      )}
+                    >
+                      <social.icon className="size-4" />
+                    </Link>
+                  )}
                 </TooltipTrigger>
                 <TooltipContent>
                   <p>{name}</p>
