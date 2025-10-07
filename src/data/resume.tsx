@@ -98,7 +98,7 @@ export const DATA = {
       start: "October 2025",
       end: "Present",
       description:
-        "Implemented the Bitcoin discreet log contract (DLC) protocol specifications as an open source Typescript SDK. Dockerized all microservices and setup production kubernetes cluster. Architected a data lake using AWS S3 and Athena for historical backtesting of bitcoin trading strategies. Built a mobile app using react native and typescript.",
+        "Design, develop, and deploy HRMS and internal web applications using ASP.NET, SQL Server, Angular, and Azure DevOps while collaborating with HR stakeholders to enhance recruitment and operations systems with a focus on security and scalability. Conduct code reviews, mentor developers, optimize performance, and maintain technical documentation, process flows, and test plans to support continuous improvement.",
     },
     {
       company: "Eurolink",
