@@ -11,7 +11,7 @@ export const DATA = {
   description:
     "Software Developer. I love building things and helping people.",
   summary:
-    "I am a Software Developer with experience in full stack development, specializing in C#/ASP.NET MVC, ReactJS, and SQL databases. I’ve worked on transforming legacy systems into cloud-based solutions, maintaining enterprise healthcare applications, and integrating REST APIs. With a background in Agile and DevOps, I focus on building scalable, reliable, and user-friendly software.",
+    "I am a Software Developer with experience in full stack development, specializing in C#/ASP.NET MVC, ReactJS, and SQL databases. I’ve worked on transforming legacy systems into cloud-based solutions, maintaining enterprise healthcare applications, and integrating REST APIs. With a background in Agile Scrum and Azure DevOps, I focus on building scalable, reliable, and user-friendly software.",
   avatarUrl: "/me.jpg",
   memojiUrl: "/memoji.jpg",
   skills: [
@@ -31,7 +31,6 @@ export const DATA = {
     "MVC",
     "ASP.NET",
     "Rest API",
-    "Java",
     "C#",
     "Git",
     "GitHub",
@@ -60,14 +59,14 @@ export const DATA = {
       },
       X: {
         name: "X",
-        url: "https://dub.sh/dillion-twitter",
+        url: "",
         icon: Icons.x,
 
         navbar: false,
       },
       Youtube: {
         name: "Youtube",
-        url: "https://dub.sh/dillion-youtube",
+        url: "",
         icon: Icons.youtube,
         navbar: false,
       },
@@ -80,7 +79,7 @@ export const DATA = {
       },
       Resume: {
         name: "Resume",
-        url: "/Warren_Miraflor_Resume.pdf",
+        url: "/Warren_Miraflor_Software_Developer.pdf",
         icon: NotebookIcon,
         navbar: true,
       },
@@ -90,7 +89,7 @@ export const DATA = {
   work: [
     {
       company: "P&A Grant Thornton",
-      href: "https://atomic.finance",
+      href: "",
       badges: [],
       location: "Remote",
       title: "Semi-Senior Developer",
@@ -103,7 +102,7 @@ export const DATA = {
     {
       company: "Eurolink",
       badges: [],
-      href: "https://shopify.com",
+      href: "",
       location: "Remote",
       title: "Software Developer",
       logoUrl: "/enic.jpg",
@@ -114,7 +113,7 @@ export const DATA = {
     },
     {
       company: "Intership Crew Philippines",
-      href: "https://nvidia.com/",
+      href: "",
       badges: [],
       location: "Manila, PH",
       title: "Software Developer",
@@ -126,7 +125,7 @@ export const DATA = {
     },
     {
       company: "FEU-NRMF",
-      href: "https://splunk.com",
+      href: "",
       badges: [],
       location: "Fairview, QC",
       title: "Internship",
@@ -283,7 +282,7 @@ export const DATA = {
       mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
       links: [
         { icon: <Icons.globe className="h-4 w-4" />,
-          href: "#",
+          href: "Coursera 5TSKDQOK3W4Q.pdf",
           title: "Show Certificate" }
       ],
     },
@@ -298,7 +297,7 @@ export const DATA = {
       mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
       links: [
         { icon: <Icons.globe className="h-4 w-4" />,
-          href: "#",
+          href: "Coursera AKXCSALB2MXX.pdf",
           title: "Show Certificate" }
       ],
     },
@@ -313,7 +312,7 @@ export const DATA = {
         "/coursera.png",
       links: [
         { icon: <Icons.globe className="h-4 w-4" />, 
-          href: "#", 
+          href: "Coursera CH3PJW80LW5A.pdf", 
           title: "Show Certificate" }
       ],
     },
@@ -327,7 +326,7 @@ export const DATA = {
         "/coursera.png",
       links: [
         { icon: <Icons.globe className="h-4 w-4" />,
-          href: "#", 
+          href: "Coursera 15RYNRQLXIY5.pdf", 
           title: "Show Certificate" }
       ],
     },
@@ -343,7 +342,7 @@ export const DATA = {
       mlh: "#",
       links: [
         { icon: <Icons.globe className="h-4 w-4" />, 
-          href: "#", 
+          href: "Coursera 6RH4WXETQ7QQ.pdf", 
           title: "Show Certificate" }
       ],
     },
@@ -357,7 +356,7 @@ export const DATA = {
         "/coursera.png",
       links: [
         { icon: <Icons.globe className="h-4 w-4" />,
-          href: "#", 
+          href: "Coursera LRMZ9P66SEUI.pdf", 
           title: "Show Certificate" }
       ],
     },
